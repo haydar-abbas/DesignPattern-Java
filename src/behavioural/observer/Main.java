@@ -8,13 +8,13 @@ public class Main {
         Student ali = new Student("Ali");
 
         Course course = new Course("Math");
-        course.add(haydar);
-        course.add(abbas);
-        course.add(ali);
+        course.addObserver(haydar);
+        course.addObserver(abbas);
+        course.addObserver(ali);
 
-        course.setAvailability(true);
+        course.setStatus(true);
         System.out.println("----------------");
-        course.remove(ali);
-        course.setAvailability(false);
+        course.removeObserver(ali);
+        course.setStatus(false);
     }
 }

@@ -6,7 +6,7 @@ import java.util.List;
 public class Course implements Observable {
 
     private final String name;
-    private String availability;
+    private String status;
     private final List<Observer> observers;
 
     public Course(String name) {
@@ -14,25 +14,25 @@ public class Course implements Observable {
         this.observers = new ArrayList<>();
     }
 
-    public void setAvailability(boolean available) {
-        this.availability = this.name + (available ? " is available" : " not available");
-        notifyAllObservers();
+    public void setStatus(boolean available) {
+        this.status = this.name + (available ? " is available" : " not available");
+        notifyObservers();
     }
 
     @Override
-    public void add(Observer observer) {
+    public void addObserver(Observer observer) {
         this.observers.add(observer);
     }
 
     @Override
-    public void remove(Observer observer) {
+    public void removeObserver(Observer observer) {
         this.observers.remove(observer);
     }
 
     @Override
-    public void notifyAllObservers() {
+    public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(this.availability);
+            observer.update(this.status);
         }
     }
 }
