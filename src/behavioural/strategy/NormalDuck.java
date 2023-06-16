@@ -5,7 +5,7 @@ import behavioural.strategy.flybehavior.FlyWithWings;
 public class NormalDuck extends Duck {
 
     public NormalDuck(String name) {
-        setName(name);
+        this.name = name;
         setFlyBehavior(new FlyWithWings());
     }
 }

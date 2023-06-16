@@ -4,8 +4,7 @@ import behavioural.strategy.flybehavior.FlyBehavior;
 
 public abstract class Duck {
 
-    private String name;
-
+    protected String name;
     private FlyBehavior flyBehavior;
 
     public String fly() {
@@ -14,10 +13,6 @@ public abstract class Duck {
 
     public void setFlyBehavior(FlyBehavior flyBehavior) {
         this.flyBehavior = flyBehavior;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 }
