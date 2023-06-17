@@ -5,7 +5,7 @@ import behavioural.strategy.flybehavior.FlyBehavior;
 public abstract class Duck {
 
     protected String name;
-    private FlyBehavior flyBehavior;
+    protected FlyBehavior flyBehavior;
 
     public String fly() {
         return String.format("I am %s, I can %s", this.name, this.flyBehavior.fly());
