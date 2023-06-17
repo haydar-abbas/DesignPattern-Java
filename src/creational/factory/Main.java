@@ -10,7 +10,8 @@ public class Main {
         System.out.print("Write your code-bank: ");
         String codeBank = scan.next();
 
-        IBank bank = BankFactory.getBank(codeBank);
+        IBankFactory bankFactory = new BankFactory();
+        IBank bank = bankFactory.getBank(codeBank);
 
         if(bank != null) {
             bank.withDrow();
