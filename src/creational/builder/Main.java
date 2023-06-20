@@ -3,8 +3,7 @@ package creational.builder;
 public class Main {
 
     public static void main(String[] args) {
-        IRobotBuilder oldRobotStyle = new OldRobotBuilder();
-        RobotEngineer robotEngineer = new RobotEngineer(oldRobotStyle);
+        RobotEngineer robotEngineer = new RobotEngineer(new Robot());
         robotEngineer.makeRobot();
         Robot firstRobot = robotEngineer.getRobot();
 

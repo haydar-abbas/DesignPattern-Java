@@ -1,37 +1,41 @@
 package creational.builder;
 
-public class Robot implements IRobotPlan {
+public class Robot {
 
     private String robotHead;
     private String robotTorso;
     private String robotArms;
     private String robotLegs;
 
-    @Override
-    public void setRobotHead(String head) {
-        this.robotHead = head;
+    public String getRobotHead() {
+        return robotHead;
     }
 
-    public String getRobotHead() { return this.robotHead; }
-
-    @Override
-    public void setRobotTorso(String torso) {
-        this.robotTorso = torso;
+    public void setRobotHead(String robotHead) {
+        this.robotHead = robotHead;
     }
 
-    public String getRobotTorso() { return this.robotTorso; }
-
-    @Override
-    public void setRobotArms(String arms) {
-        this.robotArms = arms;
+    public String getRobotTorso() {
+        return robotTorso;
     }
 
-    public String getRobotArms() { return this.robotArms; }
-
-    @Override
-    public void setRobotLegs(String legs) {
-        this.robotLegs = legs;
+    public void setRobotTorso(String robotTorso) {
+        this.robotTorso = robotTorso;
     }
 
-    public String getRobotLegs() { return this.robotLegs; }
+    public String getRobotArms() {
+        return robotArms;
+    }
+
+    public void setRobotArms(String robotArms) {
+        this.robotArms = robotArms;
+    }
+
+    public String getRobotLegs() {
+        return robotLegs;
+    }
+
+    public void setRobotLegs(String robotLegs) {
+        this.robotLegs = robotLegs;
+    }
 }

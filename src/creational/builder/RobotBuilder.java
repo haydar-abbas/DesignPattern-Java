@@ -1,11 +1,11 @@
 package creational.builder;
 
-public class OldRobotBuilder implements IRobotBuilder {
+public class RobotBuilder implements IRobotBuilder {
 
     private final Robot robot;
 
-    public OldRobotBuilder() {
-        this.robot = new Robot();
+    public RobotBuilder(Robot robot) {
+        this.robot = robot;
     }
 
     @Override
