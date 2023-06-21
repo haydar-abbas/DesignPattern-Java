@@ -2,10 +2,10 @@ package creational.builder;
 
 public class RobotEngineer {
 
-    private final IRobotBuilder robotBuilder;
+    private final RobotBuilder robotBuilder;
 
-    public RobotEngineer(Robot robot) {
-        this.robotBuilder = new RobotBuilder(robot);
+    public RobotEngineer() {
+        this.robotBuilder = new RobotBuilder(new Robot());
     }
 
     public Robot getRobot() {

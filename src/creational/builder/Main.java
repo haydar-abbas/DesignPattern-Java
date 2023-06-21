@@ -3,7 +3,7 @@ package creational.builder;
 public class Main {
 
     public static void main(String[] args) {
-        RobotEngineer robotEngineer = new RobotEngineer(new Robot());
+        RobotEngineer robotEngineer = new RobotEngineer();
         robotEngineer.makeRobot();
         Robot firstRobot = robotEngineer.getRobot();
 
