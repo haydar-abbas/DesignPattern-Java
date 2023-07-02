@@ -1,10 +1,10 @@
 package behavioural.command;
 
-public class TurnOFF implements Command {
+public class TurnOFF implements ICommand {
 
-    private final Electrical electrical;
+    private final IElectrical electrical;
 
-    public TurnOFF(Electrical electrical) {
+    public TurnOFF(IElectrical electrical) {
         this.electrical = electrical;
     }
 

@@ -1,6 +1,6 @@
 package behavioural.command;
 
-public class Satellite implements Electrical {
+public class Satellite implements IElectrical {
 
     public final int SLOT = 1;
 
