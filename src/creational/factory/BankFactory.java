@@ -2,8 +2,8 @@ package creational.factory;
 
 import creational.factory.banks.*;
 
-public class BankFactory implements IBankFactory {
-    @Override
+public class BankFactory {
+
     public IBank getBank(String bankCode) {
         return switch (bankCode) {
             case "111" -> new BankA();
