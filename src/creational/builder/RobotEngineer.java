@@ -4,8 +4,8 @@ public class RobotEngineer {
 
     private final RobotBuilder robotBuilder;
 
-    public RobotEngineer() {
-        this.robotBuilder = new RobotBuilder(new Robot());
+    public RobotEngineer(Robot robot) {
+        this.robotBuilder = new RobotBuilder(robot);
     }
 
     public Robot getRobot() {
