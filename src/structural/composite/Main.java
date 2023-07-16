@@ -3,8 +3,30 @@ package structural.composite;
 public class Main {
 
     public static void main(String[] args) {
-        ArithmeticExpression add = new CompositeOp(new NumericOp(1), new NumericOp(2), '+');
-        ArithmeticExpression multiOp = new CompositeOp(new NumericOp(3), add, '*');
-        System.out.println(multiOp.getValue());
+
+        Component cpu = new leaf("CPU", 200);
+        Component ram = new leaf("RAM", 60);
+        Component mouse = new leaf("Mouse", 25);
+        Component hdd = new leaf("HDD", 50);
+        Component monitor = new leaf("Monitor", 250);
+
+        Composite mb = new Composite("MotherBoard");
+        Composite cabinet = new Composite("Cabinet");
+        Composite computer = new Composite("Computer");
+        Composite ph = new Composite("Peri");
+
+        mb.add(cpu);
+        mb.add(ram);
+
+        ph.add(mouse);
+        ph.add(monitor);
+
+        cabinet.add(mb);
+        cabinet.add(hdd);
+
+        computer.add(ph);
+        computer.add(cabinet);
+
+        cabinet.showPrice();
     }
 }
