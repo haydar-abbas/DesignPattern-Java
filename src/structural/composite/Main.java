@@ -24,9 +24,9 @@ public class Main {
         cabinet.add(mb);
         cabinet.add(hdd);
 
-        computer.add(ph);
         computer.add(cabinet);
+        computer.add(ph);
 
-        cabinet.showPrice();
+        computer.showPrice();
     }
 }

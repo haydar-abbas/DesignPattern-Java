@@ -6,10 +6,11 @@ import java.util.List;
 public class Composite implements Component {
 
     private final String name;
-    List<Component> components = new ArrayList<>();
+    private final List<Component> components;
 
     public Composite(String name) {
         this.name = name;
+        this.components = new ArrayList<>();
     }
 
     public void add(Component component) {
