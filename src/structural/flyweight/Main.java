@@ -24,7 +24,7 @@ public class Main {
 
         for (IBank bank : banks) {
             if (bank != null) {
-                System.out.printf("1- %s: %d\n", bank.createBank(), bank.hashCode());
+                System.out.printf("%s: %d\n", bank.createBank(), bank.hashCode());
             } else {
                 System.out.println("Bank code is invalid!!");
             }
