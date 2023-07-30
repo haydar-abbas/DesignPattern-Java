@@ -11,18 +11,14 @@ public class BankFactory {
         if (this.banks.containsKey(bankCode)) {
             return this.banks.get(bankCode);
         }
-        IBank newBank;
+
         switch (bankCode) {
-            case "111" -> {
-                newBank = new BankA();
-                this.banks.put(bankCode, newBank);
+            case "111" -> this.banks.put(bankCode, new BankA());
+            case "123" -> this.banks.put(bankCode, new BankB());
+            default -> {
+                return null;
             }
-            case "123" -> {
-                newBank = new BankB();
-                this.banks.put(bankCode, newBank);
-            }
-            default -> newBank = null;
         }
-        return newBank;
+        return this.banks.get(bankCode);
     }
 }
