@@ -22,9 +22,12 @@ public class FundsCheck {
             System.out.println("Current balance: " + getCashInAccount());
             return false;
         }
+        return true;
+    }
+
+    public void makeWithDraw(double cashWithdrawal) {
         decreaseCashInAccount(cashWithdrawal);
         System.out.println("Withdrawal complete, current balance is: " + getCashInAccount());
-        return true;
     }
 
     public void makeDeposit(double cashToDeposit) {

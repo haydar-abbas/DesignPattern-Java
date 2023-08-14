@@ -5,14 +5,14 @@ public class BankAccountFacade {
     private final int accountNumber;
     private final int securityCode;
 
+    WelcomeToBank bankWelcome;
     AccountNumberCheck acctChecker;
     SecurityCodeCheck codeChecker;
     FundsCheck fundChecker;
-    WelcomeToBank bankWelcome;
 
     public BankAccountFacade(int accountNumber, int securityCode) {
-        this.securityCode = securityCode;
         this.accountNumber = accountNumber;
+        this.securityCode = securityCode;
 
         bankWelcome = new WelcomeToBank();
         acctChecker = new AccountNumberCheck();
@@ -30,9 +30,10 @@ public class BankAccountFacade {
 
     public void withDrawCash(double cashToGet) {
         if (acctChecker.accountActive(getAccountNumber()) &&
-            codeChecker.isCodeCorrect(getSecurityCode()) &&
-            fundChecker.haveEnoughMoney(cashToGet)
+                codeChecker.isCodeCorrect(getSecurityCode()) &&
+                fundChecker.haveEnoughMoney(cashToGet)
         ) {
+            fundChecker.makeWithDraw(cashToGet);
             System.out.println("Transaction complete\n");
         } else {
             System.out.println("Transaction failed\n");
