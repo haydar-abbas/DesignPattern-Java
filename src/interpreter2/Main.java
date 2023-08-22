@@ -1,4 +1,4 @@
-package behavioural.interpreter;
+package interpreter2;
 
 public class Main {
     //Rule: Robert and John are male

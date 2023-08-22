@@ -1,6 +1,6 @@
-package behavioural.interpreter;
+package interpreter2;
 
-public class TerminalExpression implements Expression{
+public class TerminalExpression implements Expression {
 
     private final String data;
 
