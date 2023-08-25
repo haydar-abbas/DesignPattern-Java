@@ -3,18 +3,17 @@ package behavioural.command;
 public class Main {
 
     public static void main(String[] args) {
+        Light light = new Light();
+        Fan fan = new Fan();
+        Switch aSwitch = new Switch();
 
-        Remote remote = new Remote();
-        TV tv = new TV();
-        Satellite satellite = new Satellite();
+        aSwitch.addCommand(light.name, new OnCommand(light), new OffCommand(light));
+        aSwitch.addCommand(fan.name, new OnCommand(fan), new OffCommand(fan));
 
-        remote.addCommand(tv.SLOT, new TurnON(tv), new TurnOFF(tv));
-        remote.addCommand(satellite.SLOT, new TurnON(satellite), new TurnOFF(satellite));
+        aSwitch.onBtnPress(light.name);
+        aSwitch.offBtnPress(light.name);
+        aSwitch.onBtnPress(fan.name);
+        aSwitch.offBtnPress(fan.name);
 
-        remote.onBtnPress(tv.SLOT);
-        remote.offBtnPress(tv.SLOT);
-
-        remote.onBtnPress(satellite.SLOT);
-        remote.offBtnPress(satellite.SLOT);
     }
 }

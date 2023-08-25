@@ -1,7 +1,6 @@
 package behavioural.command;
 
-public interface IElectrical {
-
+public interface Devices {
     void on();
     void off();
 }
