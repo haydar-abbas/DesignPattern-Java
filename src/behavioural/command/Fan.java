@@ -1,16 +1,14 @@
 package behavioural.command;
 
-public class Fan implements Devices {
-
-    public String name = "Fan";
+public class Fan implements Device {
 
     @Override
     public void on() {
-        System.out.println(this.name + " is rotating");
+        System.out.println("Fan is rotating");
     }
 
     @Override
     public void off() {
-        System.out.println(this.name + " is not rotating");
+        System.out.println("Fan is not rotating");
     }
 }

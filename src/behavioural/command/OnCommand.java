@@ -2,14 +2,14 @@ package behavioural.command;
 
 public class OnCommand implements Command {
 
-    private final Devices devices;
+    private final Device device;
 
-    public OnCommand(Devices devices) {
-        this.devices = devices;
+    public OnCommand(Device device) {
+        this.device = device;
     }
 
     public void execute() {
-        devices.on();
+        device.on();
     }
 
 }

@@ -5,15 +5,14 @@ public class Main {
     public static void main(String[] args) {
         Light light = new Light();
         Fan fan = new Fan();
-        Switch aSwitch = new Switch();
+        Switch sw = new Switch();
 
-        aSwitch.addCommand(light.name, new OnCommand(light), new OffCommand(light));
-        aSwitch.addCommand(fan.name, new OnCommand(fan), new OffCommand(fan));
+        sw.addCommand(light, new OnCommand(light), new OffCommand(light));
+        sw.addCommand(fan, new OnCommand(fan), new OffCommand(fan));
 
-        aSwitch.onBtnPress(light.name);
-        aSwitch.offBtnPress(light.name);
-        aSwitch.onBtnPress(fan.name);
-        aSwitch.offBtnPress(fan.name);
-
+        sw.onBtnPress(light);
+        sw.offBtnPress(light);
+        sw.onBtnPress(fan);
+        sw.offBtnPress(fan);
     }
 }

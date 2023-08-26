@@ -2,14 +2,14 @@ package behavioural.command;
 
 public class OffCommand implements Command {
 
-    private final Devices devices;
+    private final Device device;
 
-    public OffCommand(Devices devices) {
-        this.devices = devices;
+    public OffCommand(Device device) {
+        this.device = device;
     }
 
     public void execute() {
-        devices.off();
+        device.off();
     }
 
 }

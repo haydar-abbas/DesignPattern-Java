@@ -5,25 +5,25 @@ import java.util.Map;
 
 public class Switch {
 
-    private final Map<String, Command> onCommands;
-    private final Map<String, Command> offCommands;
+    private final Map<Device, Command> onCommands;
+    private final Map<Device, Command> offCommands;
 
     public Switch() {
         onCommands = new HashMap<>();
         offCommands = new HashMap<>();
     }
 
-    public void addCommand(String name, Command on, Command off) {
-        onCommands.put(name, on);
-        offCommands.put(name, off);
+    public void addCommand(Device device, Command on, Command off) {
+        onCommands.put(device, on);
+        offCommands.put(device, off);
     }
 
-    public void onBtnPress(String name) {
-        onCommands.get(name).execute();
+    public void onBtnPress(Device device) {
+        onCommands.get(device).execute();
     }
 
-    public void offBtnPress(String name) {
-        offCommands.get(name).execute();
+    public void offBtnPress(Device device) {
+        offCommands.get(device).execute();
     }
 
 }

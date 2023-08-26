@@ -1,16 +1,14 @@
 package behavioural.command;
 
-public class Light implements Devices {
-
-    public String name = "Light";
+public class Light implements Device {
 
     @Override
     public void on() {
-        System.out.println(this.name + " is on");
+        System.out.println("Light is on");
     }
 
     @Override
     public void off() {
-        System.out.println(this.name + " is off");
+        System.out.println("Light is off");
     }
 }
