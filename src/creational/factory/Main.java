@@ -1,6 +1,5 @@
 package creational.factory;
 
-import creational.factory.banks.IBank;
 import java.util.Scanner;
 
 public class Main {
@@ -12,9 +11,9 @@ public class Main {
         String bankCode = scan.next();
 
         BankFactory bankFactory = new BankFactory();
-        IBank bank = bankFactory.getBank(bankCode);
+        Bank bank = bankFactory.getBank(bankCode);
 
-        if(bank == null) {
+        if (bank == null) {
             System.out.println("The Bank Code is invalid!");
             return;
         }
