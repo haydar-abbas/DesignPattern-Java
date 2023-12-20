@@ -1,11 +1,10 @@
 package creational.builder;
 
 public class Robot {
-
-    private String robotHead;
-    private String robotTorso;
-    private String robotArms;
-    private String robotLegs;
+    String robotHead;
+    String robotTorso;
+    String robotArms;
+    String robotLegs;
 
     public String getRobotHead() {
         return robotHead;

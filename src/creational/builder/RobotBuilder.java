@@ -6,6 +6,10 @@ public class RobotBuilder {
 
     public RobotBuilder(Robot robot) {
         this.robot = robot;
+        buildRobotHead();
+        buildRobotTorso();
+        buildRobotArms();
+        buildRobotLegs();
     }
 
     public void buildRobotHead() {
